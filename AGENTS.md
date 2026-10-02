@@ -1,9 +1,26 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Agent Instructions
 
-# This is NOT the Next.js you know
+Coding standards for this project (a Next.js link shortener on Neon + Drizzle + Clerk). Detailed, topic-specific rules live in [docs/](./docs). This file is the entry point — keep it short and link out rather than duplicating detail.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Non-negotiables
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+- **MANDATORY: Before writing or editing ANY code, read every relevant file in [docs/](./docs) for the area you're touching (see Docs index below).** Do this first, not after — never generate code based on assumptions about auth, UI components, or other documented areas without having read the matching doc file in that same turn.
+- Never commit secrets or print `.env.local` values. `CLERK_SECRET_KEY` and `DATABASE_URL*` are server-only.
+- Schema changes go through Drizzle Kit (`npm run db:generate` → `npm run db:migrate`); never hand-edit generated SQL in [drizzle/](./drizzle) or the DB directly.
+- Use the shared `db` client from [src/db/index.ts](./src/db/index.ts); never create a second Drizzle client.
+- Auth/routing protection lives in [proxy.ts](./proxy.ts) (Next.js 16's renamed middleware file) — don't add a `middleware.ts`.
+- Validate and parameterize all external input before it reaches a DB query; never interpolate user input into SQL.
+- Run `npm run lint` and ensure `tsc`/strict typing pass before considering a change done.
+- Keep changes scoped to what's requested — no speculative abstractions, no unrelated reformatting.
 
-<!-- END:nextjs-agent-rules -->
+## Docs index
+
+- [docs/authentication.md](./docs/authentication.md) — Clerk-only auth, protected `/dashboard`, homepage redirect, and modal sign-in/sign-up rules.
+- [docs/ui-components.md](./docs/ui-components.md) — shadcn/ui only, no custom components, CLI generation and styling conventions.
+
+## Commands
+
+- `npm run dev` — start the dev server.
+- `npm run lint` — ESLint (flat config, `eslint-config-next`).
+- `npm run db:generate` / `npm run db:migrate` — Drizzle schema migrations.
+- `npm run build` — production build.

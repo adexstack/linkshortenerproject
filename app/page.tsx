@@ -1,8 +1,42 @@
 import Image from "next/image";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import {
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default async function Home() {
+  const { userId } = await auth();
+
+  if (userId) {
+    redirect("/dashboard");
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <header className="absolute inset-x-0 top-0 flex h-16 items-center justify-between border-b border-black/10 bg-white px-6 dark:border-white/10 dark:bg-black sm:px-10">
+        <Link className="font-semibold text-black dark:text-white" href="/">
+          Link Shortener
+        </Link>
+        <nav className="flex items-center gap-3" aria-label="Account">
+          <Show when="signed-out">
+            <SignInButton mode="redirect">
+              <Button variant="ghost">Sign in</Button>
+            </SignInButton>
+            <SignUpButton mode="redirect">
+              <Button>Create account</Button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
+        </nav>
+      </header>
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert h-5 w-[100px]"
