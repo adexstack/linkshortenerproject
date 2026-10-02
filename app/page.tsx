@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const features = [
   {
     icon: Link2,
-    title: "Short links, instantly",
+    title: "Short links, instantly!",
     description:
       "Turn long, unwieldy URLs into clean links that are easy to share anywhere.",
   },
