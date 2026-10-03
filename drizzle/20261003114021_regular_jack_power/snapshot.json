@@ -1,7 +1,7 @@
 {
   "version": "8",
   "dialect": "postgres",
-  "id": "163b1e87-5844-4911-ac5e-97387026ec81",
+  "id": "4bee2e37-6e44-4741-83a5-b1f4ab9fc396",
   "prevIds": [
     "ebf67af1-f762-4878-bd63-a27cdef66a4c"
   ],
@@ -121,5 +121,7 @@
       "entityType": "uniques"
     }
   ],
-  "renames": []
+  "renames": [
+    "public.short_links.destination->public.short_links.original_url"
+  ]
 }
