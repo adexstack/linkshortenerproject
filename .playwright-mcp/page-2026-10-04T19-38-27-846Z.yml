@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "Shortly" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=e10]:
+        - link "Features" [ref=e11] [cursor=pointer]:
+          - /url: "#features"
+        - button "Sign in" [ref=e12]
+        - button "Get started" [ref=e13]
+    - main [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Big links, meet small links." [level=1] [ref=e17]
+          - paragraph [ref=e18]: Make long URLs short, clear, and ready to go. Keep the links you share in one simple place with Shortly.
+          - generic [ref=e19]:
+            - button "Create your first link" [ref=e20]
+            - button "See how it works" [ref=e21] [cursor=pointer]
+          - paragraph [ref=e22]: Free to get started.
+        - generic [ref=e27]:
+          - paragraph [ref=e28]: "Demo: a long link is pasted and becomes shortly.link/weekend."
+          - generic [aria-hidden] [ref=e29]:
+            - paragraph [ref=e31]: https://www.exampl
+            - paragraph [ref=e45]: shortly.link/
+            - paragraph [ref=e47]
+      - generic [ref=e49]:
+        - heading "Every link has somewhere to go." [level=2] [ref=e50]
+        - paragraph [ref=e51]: A straightforward toolkit for making your links easier to use and easier to share.
+        - generic [ref=e52]:
+          - article [ref=e53]:
+            - heading "Short links, instantly" [level=3] [ref=e57]
+            - paragraph [ref=e58]: Turn long, unwieldy URLs into clean links that are easy to share anywhere.
+          - article [ref=e59]:
+            - heading "Simple by design" [level=3] [ref=e63]
+            - paragraph [ref=e64]: Skip the clutter. Create and manage the links you need from one straightforward workspace.
+          - article [ref=e65]:
+            - heading "Ready for anywhere" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Keep your links neat in a message, a post, or wherever you connect with people.
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - heading "Ready to make links a little lighter?" [level=2] [ref=e72]
+          - paragraph [ref=e73]: Get started and share something shorter.
+        - button "Get started" [ref=e74]
+    - contentinfo [ref=e75]:
+      - generic [ref=e76]:
+        - link "Shortly" [ref=e77] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e78]: Short links, made simple.
+  - button "Open Next.js Dev Tools" [ref=e84] [cursor=pointer]
+  - alert [ref=e88]

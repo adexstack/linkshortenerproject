@@ -1,10 +1,9 @@
 # Agent Instructions
 
-Coding standards for this project (a Next.js link shortener on Neon + Drizzle + Clerk). Detailed, topic-specific rules live in [docs/](./docs). This file is the entry point — keep it short and link out rather than duplicating detail.
+Coding standards for this project (a Next.js link shortener on Neon + Drizzle + Clerk). This file is the entry point — keep it short and link out rather than duplicating detail.
 
 ## Non-negotiables
 
-- **MANDATORY: Before writing or editing ANY code, read every relevant file in [docs/](./docs) for the area you're touching (see Docs index below).** Do this first, not after — never generate code based on assumptions about auth, UI components, or other documented areas without having read the matching doc file in that same turn.
 - Never commit secrets or print `.env.local` values. `CLERK_SECRET_KEY` and `DATABASE_URL*` are server-only.
 - Schema changes go through Drizzle Kit (`npm run db:generate` → `npm run db:migrate`); never hand-edit generated SQL in [drizzle/](./drizzle) or the DB directly.
 - Use the shared `db` client from [src/db/index.ts](./src/db/index.ts); never create a second Drizzle client.
@@ -12,11 +11,6 @@ Coding standards for this project (a Next.js link shortener on Neon + Drizzle + 
 - Validate and parameterize all external input before it reaches a DB query; never interpolate user input into SQL.
 - Run `npm run lint` and ensure `tsc`/strict typing pass before considering a change done.
 - Keep changes scoped to what's requested — no speculative abstractions, no unrelated reformatting.
-
-## Docs index
-
-- [docs/authentication.md](./docs/authentication.md) — Clerk-only auth, protected `/dashboard`, homepage redirect, and modal sign-in/sign-up rules.
-- [docs/ui-components.md](./docs/ui-components.md) — shadcn/ui only, no custom components, CLI generation and styling conventions.
 
 ## Commands
 

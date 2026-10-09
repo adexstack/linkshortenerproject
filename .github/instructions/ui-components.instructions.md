@@ -1,3 +1,9 @@
+
+---
+name: UI Components
+description: Read this before implementing or modifying any UI components. Instructions for handling UI in the app using shadcn/ui.
+---
+
 # UI Components
 
 All UI in this app is built from [shadcn/ui](https://ui.shadcn.com) components. Never hand-write a custom component for something shadcn already provides.

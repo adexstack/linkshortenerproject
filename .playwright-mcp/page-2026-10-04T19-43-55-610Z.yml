@@ -1,0 +1,84 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - banner [ref=f1e3]:
+      - link "Shortly" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=f1e10]:
+        - link "Features" [ref=f1e94] [cursor=pointer]:
+          - /url: "#features"
+        - button "Sign in" [ref=f1e11]
+        - button "Get started" [ref=f1e12]
+    - main [ref=f1e13]:
+      - generic [ref=f1e14]:
+        - generic [ref=f1e15]:
+          - heading "Big links, meet small links." [level=1] [ref=f1e16]
+          - paragraph [ref=f1e17]: Make long URLs short, clear, and ready to go. Keep the links you share in one simple place with Shortly.
+          - generic [ref=f1e18]:
+            - button "Create your first link" [ref=f1e19]
+            - button "See how it works" [ref=f1e20] [cursor=pointer]
+          - paragraph [ref=f1e21]: Free to get started.
+        - generic [ref=f1e26]:
+          - paragraph [ref=f1e27]: "Demo: a long link is pasted and becomes shortly.link/weekend."
+          - generic [aria-hidden] [ref=f1e28]:
+            - paragraph [ref=f1e30]: https://www.example.com/guides/2026/10/how-to-plan-a-perfect-weekend-away?utm_source=newsletter&utm_medium=email&utm_campaign=autumn
+            - paragraph [ref=f1e97]: shortly.link/weekend
+            - paragraph [ref=f1e46]: 132 characters down to 20
+      - generic [ref=f1e48]:
+        - heading "Every link has somewhere to go." [level=2] [ref=f1e49]
+        - paragraph [ref=f1e50]: A straightforward toolkit for making your links easier to use and easier to share.
+        - generic [ref=f1e51]:
+          - article [ref=f1e52]:
+            - heading "Short links, instantly" [level=3] [ref=f1e56]
+            - paragraph [ref=f1e57]: Turn long, unwieldy URLs into clean links that are easy to share anywhere.
+          - article [ref=f1e58]:
+            - heading "Simple by design" [level=3] [ref=f1e62]
+            - paragraph [ref=f1e63]: Skip the clutter. Create and manage the links you need from one straightforward workspace.
+          - article [ref=f1e64]:
+            - heading "Ready for anywhere" [level=3] [ref=f1e67]
+            - paragraph [ref=f1e68]: Keep your links neat in a message, a post, or wherever you connect with people.
+      - generic [ref=f1e69]:
+        - generic [ref=f1e70]:
+          - heading "Ready to make links a little lighter?" [level=2] [ref=f1e71]
+          - paragraph [ref=f1e72]: Get started and share something shorter.
+        - button "Get started" [ref=f1e73]
+    - contentinfo [ref=f1e74]:
+      - generic [ref=f1e75]:
+        - link "Shortly" [ref=f1e76] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=f1e77]: Short links, made simple.
+  - button "Open Next.js Dev Tools" [ref=f1e83] [cursor=pointer]
+  - alert [ref=f1e88]
+  - dialog [active] [ref=f1e100]:
+    - generic [ref=f1e102]:
+      - generic [ref=f1e103]:
+        - button "Close modal" [ref=f1e104] [cursor=pointer]
+        - generic [ref=f1e108]:
+          - heading "Sign in to LinkShortener" [level=1] [ref=f1e109]
+          - paragraph [ref=f1e110]: Welcome back! Please sign in to continue
+        - generic [ref=f1e111]:
+          - button "Continue with Google" [ref=f1e114] [cursor=pointer]
+          - paragraph [ref=f1e121]: or
+          - generic [ref=f1e123]:
+            - generic [ref=f1e124]:
+              - generic [ref=f1e127]:
+                - generic [ref=f1e128]: Email address
+                - textbox "Email address" [ref=f1e130]:
+                  - /placeholder: Enter your email address
+              - generic:
+                - generic: Password
+                - generic:
+                  - textbox:
+                    - /placeholder: Enter your password
+                  - button
+            - button "Continue" [ref=f1e133] [cursor=pointer]
+      - generic [ref=f1e137]:
+        - generic [ref=f1e138]:
+          - generic [ref=f1e139]: Don’t have an account?
+          - link "Sign up" [ref=f1e140] [cursor=pointer]:
+            - /url: http://localhost:3000/CLERK-ROUTER/VIRTUAL/sign-up
+        - generic [ref=f1e142]:
+          - generic [ref=f1e144]:
+            - paragraph [ref=f1e145]: Secured by
+            - link "Clerk logo" [ref=f1e146] [cursor=pointer]:
+              - /url: https://go.clerk.com/components
+          - paragraph [ref=f1e152]: Development mode

@@ -1,3 +1,7 @@
+---
+name: Authentication
+description: Read this before implementing or modifying any authentication-related code. Instructions for handling authentication in the app using Clerk.
+---
 # Authentication
 
 All authentication in this app is handled by [Clerk](https://clerk.com) via `@clerk/nextjs`. Do not add another auth library, custom session/JWT handling, or a second identity provider.
